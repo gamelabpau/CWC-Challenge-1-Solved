@@ -9,22 +9,7 @@ public class InitL2 : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        // gameManager.lifesUI.Clear();
-        List<GameObject> vidasActivas = new List<GameObject>();
-        GameObject[] vidas = GameObject.FindGameObjectsWithTag("Vida");
-        foreach (GameObject vida in vidas)
-        {
-            if (vida.activeInHierarchy)
-            {
-                // gameManager.lifesUI.Add(vida);
-            }
-        }
-        
+        gameManager.InitButtonListeners();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

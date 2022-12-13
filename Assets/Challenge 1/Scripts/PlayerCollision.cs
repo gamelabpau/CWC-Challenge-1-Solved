@@ -25,7 +25,7 @@ public class PlayerCollision : MonoBehaviour
                 gameManager.FinLevel1();
             else if (gameManager.GetLevel() == 2)
             {
-                gameManager.GameOver();
+                gameManager.WinGame();
             }
         }
     }
