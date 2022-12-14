@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private int vidas = 3;
     [SerializeField] private int level = 1;
+
+    private bool winGame = false;
     
     private static GameManager instance;
 
@@ -69,6 +71,11 @@ public class GameManager : MonoBehaviour
     {
         return level;
     }
+
+    public bool GetWinGame()
+    {
+        return winGame;
+    }
     
     public void FinLevel1()
     {
@@ -120,6 +127,10 @@ public class GameManager : MonoBehaviour
     public void WinGame()
     {
         Debug.Log("You Win!");
+        // messageText.text = "You win!";
+        // messageText.gameObject.SetActive(true);
+        winGame = true;
+        SceneManager.LoadScene("Game Over");
         Time.timeScale = 0f;
     }
 
